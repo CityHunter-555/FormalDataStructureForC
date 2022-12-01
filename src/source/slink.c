@@ -58,4 +58,22 @@ int GetElemSlink(slink *head,int i,ElemType *e){
     *e=p->data;
     return 1;//取元素成功,返回1
 }
-
+/**
+ * 4.定位操作
+ * 查找元素x在单链表head中第1次出现的位置
+ * 思路：从单链表head的第1个结点开始,逐个给定值x的结点数据域值的比较,若某结点数据域的值和给定值x相等,则返回该结点的位序;若不存在,则返回0
+ * @param head
+ * @param x
+ * @return
+ */
+int LocateSlink(slink *head,ElemType x){
+    int i=1;
+    slink *p=head->next;
+    while(p!=NULL&&p->data!=x){ /*从第1个结点开始查找数据域值为x的结点*/
+        p=p->next;i++;
+    }if(p){
+        return i;
+    } else{
+        return 0;
+    }
+}
