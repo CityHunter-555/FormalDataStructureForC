@@ -13,4 +13,8 @@ typedef struct node{
 slink *CreateSlink(int n);
 int GenLenSlink(slink *head);
 int GetElemSlink(slink *head,int i,ElemType *e);
+int LocateSlink(slink *head,ElemType x);
+int DeleteSlink(slink *head,int i,ElemType *e);
+int InsertSlink(slink *head,int i,ElemType x);
+void listSlink(slink *head);
 #endif //FORMALDATASTRUCTURE_SLINK_H

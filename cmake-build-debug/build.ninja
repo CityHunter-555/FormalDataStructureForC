@@ -77,6 +77,27 @@ build CMakeFiles/FormalDataStructure.dir/src/source/slink.c.obj: C_COMPILER__For
   OBJECT_DIR = CMakeFiles\FormalDataStructure.dir
   OBJECT_FILE_DIR = CMakeFiles\FormalDataStructure.dir\src\source
 
+build CMakeFiles/FormalDataStructure.dir/src/source/AdjacentMatrix.c.obj: C_COMPILER__FormalDataStructure_Debug D$:/C/FormalDataStructureForC/src/source/AdjacentMatrix.c || cmake_object_order_depends_target_FormalDataStructure
+  DEFINES = -DFormalDataStructure_EXPORTS
+  DEP_FILE = CMakeFiles\FormalDataStructure.dir\src\source\AdjacentMatrix.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\FormalDataStructure.dir
+  OBJECT_FILE_DIR = CMakeFiles\FormalDataStructure.dir\src\source
+
+build CMakeFiles/FormalDataStructure.dir/src/source/CycleQuqne.c.obj: C_COMPILER__FormalDataStructure_Debug D$:/C/FormalDataStructureForC/src/source/CycleQuqne.c || cmake_object_order_depends_target_FormalDataStructure
+  DEFINES = -DFormalDataStructure_EXPORTS
+  DEP_FILE = CMakeFiles\FormalDataStructure.dir\src\source\CycleQuqne.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\FormalDataStructure.dir
+  OBJECT_FILE_DIR = CMakeFiles\FormalDataStructure.dir\src\source
+
+build CMakeFiles/FormalDataStructure.dir/src/source/AdjacentList.c.obj: C_COMPILER__FormalDataStructure_Debug D$:/C/FormalDataStructureForC/src/source/AdjacentList.c || cmake_object_order_depends_target_FormalDataStructure
+  DEFINES = -DFormalDataStructure_EXPORTS
+  DEP_FILE = CMakeFiles\FormalDataStructure.dir\src\source\AdjacentList.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\FormalDataStructure.dir
+  OBJECT_FILE_DIR = CMakeFiles\FormalDataStructure.dir\src\source
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target FormalDataStructure
@@ -85,7 +106,7 @@ build CMakeFiles/FormalDataStructure.dir/src/source/slink.c.obj: C_COMPILER__For
 #############################################
 # Link the shared library libFormalDataStructure.dll
 
-build libFormalDataStructure.dll libFormalDataStructure.dll.a: C_SHARED_LIBRARY_LINKER__FormalDataStructure_Debug CMakeFiles/FormalDataStructure.dir/library.c.obj CMakeFiles/FormalDataStructure.dir/src/source/sqlist.c.obj CMakeFiles/FormalDataStructure.dir/src/source/Linear_List.c.obj CMakeFiles/FormalDataStructure.dir/src/source/slink.c.obj
+build libFormalDataStructure.dll libFormalDataStructure.dll.a: C_SHARED_LIBRARY_LINKER__FormalDataStructure_Debug CMakeFiles/FormalDataStructure.dir/library.c.obj CMakeFiles/FormalDataStructure.dir/src/source/sqlist.c.obj CMakeFiles/FormalDataStructure.dir/src/source/Linear_List.c.obj CMakeFiles/FormalDataStructure.dir/src/source/slink.c.obj CMakeFiles/FormalDataStructure.dir/src/source/AdjacentMatrix.c.obj CMakeFiles/FormalDataStructure.dir/src/source/CycleQuqne.c.obj CMakeFiles/FormalDataStructure.dir/src/source/AdjacentList.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\FormalDataStructure.dir

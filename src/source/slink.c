@@ -77,3 +77,79 @@ int LocateSlink(slink *head,ElemType x){
         return 0;
     }
 }
+/**
+ * 5.删除操作
+ * 删除带头结点单链表head的第i个结点
+ * 思路：先确定删除位置i的合理性(1<=i<=n),然后在单链表head上找到要删除结点的前驱结点,即第i-1个结点,由p指向它,q指向要删除的结点。删除q所指向的结点的语句为p->next=q->next;。
+ * @param head 单链表
+ * @param i 删除位序
+ * @param e 保存删除结点数据域值
+ * @return
+ */
+int DeleteSlink(slink *head,int i,ElemType *e){
+    slink *p,*q;
+    int j;
+    if(i<1){return 0;}//i不合理返回0
+    p=head;j=0;
+    while(p->next!=NULL&&j<i-1){
+        p=p->next;j++;//从第1个结点开始查找第i-1个结点,由p指向它
+    }
+    if(p->next==NULL){return 0;}//参数i值超过链表的长度,返回0
+    q=p->next;//q指向第i个结点
+    p->next=q->next;//p的指针域指向q指向结点的下一个结点
+    *e=q->data;//保存结点数据域值
+    free(q);//释放第i个结点占用的空间
+    return 1;//删除成功返回1
+}
+/**
+ * 6.插入操作
+ * 在带头结点的单链表head的第i个结点之前插入一个值为x的新结点。
+ * @param head 单链表
+ * @param i 位序
+ * @param x 插入的值
+ * @return
+ */
+int InsertSlink(slink *head,int i,ElemType x){
+    slink *p,*q;
+    int j;
+    if(i<1){return 0;}
+    p=head;j=0;
+    while(p!=NULL&&j<i-1){
+        p=p->next;j++; /*从第1个结点开始查找第i-1个结点,由p指向它*/
+    }if(p==NULL){return 0;}/*参数i值超过链表长度+1,返回0*/
+    q=(slink *) malloc(sizeof (slink));
+    q->data=x;//创建值为x的结点q
+    q->next=p->next;//将q指向的结点插入到p指向的结点之后
+    p->next=q;
+    return 1;//插入成功,返回1
+}
+/**
+ * 7.输出操作
+ * 输出带头结点的单链表head中的所有结点值
+ * @param head 单链表
+ */
+void listSlink(slink *head){
+    slink *p;
+    p=head->next;
+    while(p!=NULL){
+        printf("4d%",p->data);
+        p=p->next;
+    }
+    printf("\n");
+}
+/**
+ * 8.连接两个单链表操作
+ * 实现单链表a和b的链接。结果链表仍使用原来两个链表的存储空间，不另开辟存储空间
+ * @param a
+ * @param b
+ */
+void LinkSlink(slink *a,slink *b){
+    slink *p;
+    for(p=a;p->next!=NULL;p=p->next);
+    p->next=b->next;
+    free(b);
+}
+
+void MergeSlink(slink *la,slink *lb){
+
+}
